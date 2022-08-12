@@ -5,19 +5,20 @@ import lombok.Data;
 
 @Data
 public class SummonerInform {
+    private int display;
+    private Item[] items;
 
-    private String id;
+    @Data
+    static class Item{
 
-    private String accountId;
+        private String id;
+        private String accountId;
+        private int profileIconId;
+        private long revisionDate;
+        private String name;
+        private String puuid;
+        private long summonerLevel;
 
-    private int profileIconId;
-
-    private long revisionDate;
-
-    private String name;
-
-    private String puuid;
-
-    private long summonerLevel;
+    }
 
 }
